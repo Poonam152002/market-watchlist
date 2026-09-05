@@ -31,6 +31,7 @@ function App() {
   const [symbol, setSymbol] = useState("");
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState<Stock | null>(null);
+  const [darkMode, setDarkMode] = useState(false);
   const [error, setError] = useState("");
 
   async function loadStocks() {
@@ -83,7 +84,7 @@ function App() {
   const attention = stocks.filter(s => s.severity !== "NORMAL").length;
 
   return (
-    <div className="app">
+  <div className={`app ${darkMode ? "dark" : ""}`}>
       <header className="topbar">
         <div className="brand">
           <div className="brandIcon"><Activity size={21} /></div>
@@ -94,6 +95,9 @@ function App() {
         </div>
         <div className="topActions">
           <span className="live"><i /> Demo market live</span>
+         <button className="iconBtn" onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+        </button>
           <button className="iconBtn"><Bell size={18} /></button>
           <div className="avatar">A</div>
         </div>
