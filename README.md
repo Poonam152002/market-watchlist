@@ -1,61 +1,42 @@
-# 📊 Smart Market Watchlist
+# Smart Market Watchlist
 
-A real-time stock watchlist app that highlights **meaningful changes** — not just price movements. Instead of showing every fluctuation, it scores each stock based on price change, volume, and news activity to surface what actually deserves your attention.
+A stock watchlist app I built to track price and volume changes for a few stocks I follow. Instead of just showing raw prices, it calculates an attention score for each stock based on how much it moved, volume compared to average, and related news — so I can quickly tell what actually matters and what's just normal noise.
 
-🔗 **Live Demo:** [market-watchlist-eta.vercel.app](https://market-watchlist-eta.vercel.app)
+Live: https://market-watchlist-eta.vercel.app
 
-## ✨ Features
+## What it does
 
-- 📈 Real-time price and volume tracking for watchlisted stocks
-- 🎯 Attention score (0–100) that ranks stocks by significance of change
-- 🔍 Search and filter your watchlist
-- ➕ Add/remove stocks by ticker symbol
-- 💡 "Why?" explainer modal showing reasons behind each score
-- 📊 Summary dashboard: stocks needing attention, total tracked, last check time
+- Shows a watchlist of stocks with current price, % change, and volume
+- Calculates a score (0-100) for each stock based on how significant the change is
+- Click "Why?" on any stock to see the reasoning behind its score
+- Add or remove stocks from your watchlist by ticker symbol
+- Search through your watchlist
+- Dashboard shows how many stocks need attention right now
 
-## 🛠️ Tech Stack
+## Tech used
 
-**Frontend:** React, TypeScript, Vite, Lucide Icons
-**Backend:** Node.js, Express
-**Deployment:** Vercel (frontend), Render (backend)
+Frontend: React + TypeScript, built with Vite
+Backend: Node.js + Express
+Hosted on Vercel (frontend) and Render (backend)
 
-## 🚀 Getting Started
+## Running it locally
 
-### Frontend
-\`\`\`bash
-cd smart-market-watchlist-frontend-fixed
-npm install
-npm run dev
-\`\`\`
+Frontend:
+You'll need a `.env` file in the frontend folder:
 
-### Backend
-\`\`\`bash
-cd smart-market-watchlist-backend
-npm install
-npm run dev
-\`\`\`
+## API routes
 
-Create a \`.env\` file in the frontend with:
-\`\`\`
-VITE_API_BASE_URL=http://localhost:5000
-\`\`\`
+- GET /api/stocks - get all stocks in the watchlist with their scores
+- POST /api/watchlist - add a stock (send symbol in the body)
+- DELETE /api/watchlist/:symbol - remove a stock
+- GET /api/health - check if backend is up
 
-## 📡 API Endpoints
+## Things I want to add later
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /api/stocks | Fetch all watchlisted stocks with scores |
-| POST | /api/watchlist | Add a stock by symbol |
-| DELETE | /api/watchlist/:symbol | Remove a stock from watchlist |
-| GET | /api/health | Backend health check |
+- Connect to a real stock market API instead of demo data
+- Price history charts
+- Alerts when a stock crosses a certain threshold
+- Login so different users can have their own watchlists
 
-## 📌 Roadmap
-
-- [ ] Integrate live stock market API (Alpha Vantage / Finnhub)
-- [ ] Price alert notifications
-- [ ] Historical price charts
-- [ ] User authentication for personalized watchlists
-
-## 👩‍💻 Author
-
-**POONAM RAO ** — Built as part of placement portfolio preparation.
+---
+Built by POONAAM RAO
