@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Activity, Bell, ChevronDown, Clock3, Plus, RefreshCw, Search, TrendingDown, TrendingUp, X } from "lucide-react";
-
+import { Activity, Bell, ChevronDown, Clock3, Moon, Plus, RefreshCw, Search, Sun, TrendingDown, TrendingUp, X } from "lucide-react";
 const API = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
 type Severity = "IMPORTANT" | "NOTABLE" | "NORMAL";
