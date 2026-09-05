@@ -13,6 +13,15 @@ Live: https://market-watchlist-eta.vercel.app
 - Search through your watchlist
 - Dashboard shows how many stocks need attention right now
 
+## How to use
+
+- Search box filters stocks already in your watchlist by name or symbol
+- Type a ticker (like AMZN) in the "Ticker" field and click Add to track a new stock
+- Click "Why?" on any card to see the reasoning behind that stock's attention score
+- Use the Attention dropdown to filter by how significant the change is
+- Click the moon/sun icon in the top right to switch between light and dark mode
+- Click the × on any card to remove it from your watchlist
+
 ## Tech used
 
 Frontend: React + TypeScript, built with Vite
@@ -22,7 +31,23 @@ Hosted on Vercel (frontend) and Render (backend)
 ## Running it locally
 
 Frontend:
+\`\`\`
+cd smart-market-watchlist-frontend-fixed
+npm install
+npm run dev
+\`\`\`
+
+Backend:
+\`\`\`
+cd smart-market-watchlist-backend
+npm install
+npm run dev
+\`\`\`
+
 You'll need a `.env` file in the frontend folder:
+\`\`\`
+VITE_API_BASE_URL=http://localhost:5000
+\`\`\`
 
 ## API routes
 
