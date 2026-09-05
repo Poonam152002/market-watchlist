@@ -146,3 +146,29 @@ button { cursor: pointer; }
   .filterBtn { min-height: 42px; justify-content: center; }
   .stockGrid { grid-template-columns: 1fr; }
 }
+.app.dark {
+  background: #0f0f0f;
+  color: #f0f0f0;
+}
+
+.app.dark .topbar {
+  background: #1a1a1a;
+  border-color: #2a2a2a;
+}
+
+.app.dark .stockCard,
+.app.dark .summaryCard {
+  background: #1a1a1a;
+  border-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+.app.dark .error {
+  background: #3a1a1a;
+}
+
+.app.dark input {
+  background: #1a1a1a;
+  color: #f0f0f0;
+  border-color: #333;
+}
